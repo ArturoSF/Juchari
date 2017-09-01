@@ -58,4 +58,9 @@ class Home extends CI_Controller {
         }
         $this->load->view('all_data', $data);
     }
+
+    public function bibliografia()
+    {
+        $this->load->view('bibliografia');
+    }
 }

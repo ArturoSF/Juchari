@@ -56,73 +56,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
-        <header class="row bg-blue max-size">
-            <div class="col-md-3 title-header text-uppercase"><a href="<?php echo base_url(); ?>">Juchari Utakatecha</a>
-                <i class="fa fa-bars fa-2x open-menu"></i>
-            </div>
-            <div class="col-md-9 menu-content">
-                <div class="menu-item text-uppercase"><a href="<?php echo base_url(); ?>"><?php echo $this->lang->line('menu_1'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_2'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_3'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_4'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_5'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_6'); ?></a></div>
-                <div class="menu-item dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="actual-lang">
-                        <?php if ($this->session->userdata('site_lang') == 'spanish' || empty($this->session->userdata('site_lang'))) {
-                            echo 'Español';
-                        } else {
-                            echo 'P\'urhépecha';
-                        } ?>
-                    </span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/spanish';">Español</a>
-                        </li>
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/purhepecha';">P'urhépecha</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <header class="row bg-blue middle-size">
-            <div class="col-md-12 title-header text-uppercase"><a href="<?php echo base_url(); ?>">Juchari Utakatecha</a> <span class="open-menu"><i class="fa fa-bars"></i></span>
-            </div>
-            <div class="col-md-12 menu-content">
-                <div class="menu-item text-uppercase"><a href="<?php echo base_url(); ?>"><?php echo $this->lang->line('menu_1'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_2'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_3'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_4'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_5'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_6'); ?></a></div>
-                <div class="menu-item dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="actual-lang">
-                        <?php if ($this->session->userdata('site_lang') == 'spanish' || empty($this->session->userdata('site_lang'))) {
-                            echo 'Español';
-                        } else {
-                            echo 'P\'urhépecha';
-                        } ?>
-                    </span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/spanish';">Español</a>
-                        </li>
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/purhepecha';">P'urhépecha</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+        
+        <?php include 'partials/header.php'; ?>
 
-        <div class="header-img"></div>
+        <div id="banner" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#banner" data-slide-to="0" class="active"></li>
+                <li data-target="#banner" data-slide-to="1" class=""></li>
+                <li data-target="#banner" data-slide-to="2" class=""></li>
+                <li data-target="#banner" data-slide-to="3" class=""></li>
+                <li data-target="#banner" data-slide-to="4" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="<?=base_url()?>assets/img/slider/2.jpg">
+                </div>
+                <div class="item"><img src="<?=base_url()?>assets/img/slider/6.jpg" alt=""></div>
+                <div class="item"><img src="<?=base_url()?>assets/img/slider/4.jpg" alt=""></div>
+                <div class="item"><img src="<?=base_url()?>assets/img/slider/1.jpg" alt=""></div>
+                <div class="item"><img src="<?=base_url()?>assets/img/slider/5.jpg" alt=""></div>
+                
+            </div>
+            <a class="left carousel-control" href="#banner" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#banner" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
 
         <nav class="max-size-map">
             <img src="<?php echo base_url(); ?>assets/img/mapa_paracho.svg" alt="">
@@ -217,9 +174,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </nav>
-        <footer class="bg-green">
 
-        </footer>
+        <?php include 'partials/footer.php'; ?>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>assets/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

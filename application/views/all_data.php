@@ -55,74 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
-        <header class="row bg-blue max-size">
-            <div class="col-md-3 title-header text-uppercase"><a href="<?php echo base_url(); ?>">Juchari Utakatecha</a>
-                <i class="fa fa-bars fa-2x open-menu"></i>
-            </div>
-            <div class="col-md-9 menu-content">
-                <div class="menu-item text-uppercase">
-                    <a href="<?php echo base_url(); ?>"><?php echo $this->lang->line('menu_1'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_2'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_3'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_4'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_5'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_6'); ?></a></div>
-                <div class="menu-item dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="actual-lang">
-                        <?php if ($this->session->userdata('site_lang') == 'spanish' || empty($this->session->userdata('site_lang'))) {
-                            echo 'Español';
-                        } else {
-                            echo 'P\'urhépecha';
-                        } ?>
-                    </span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/spanish';">Español</a>
-                        </li>
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/purhepecha';">P'urhépecha</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <header class="row bg-blue middle-size">
-            <div class="col-md-12 title-header text-uppercase"><a href="<?php echo base_url(); ?>">Juchari
-                    Utakatecha</a> <span class="open-menu"><i class="fa fa-bars"></i></span>
-            </div>
-            <div class="col-md-12 menu-content">
-                <div class="menu-item text-uppercase">
-                    <a href="<?php echo base_url(); ?>"><?php echo $this->lang->line('menu_1'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_2'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_3'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_4'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_5'); ?></a></div>
-                <div class="menu-item text-uppercase"><a href="#"><?php echo $this->lang->line('menu_6'); ?></a></div>
-                <div class="menu-item dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="actual-lang">
-                        <?php if ($this->session->userdata('site_lang') == 'spanish' || empty($this->session->userdata('site_lang'))) {
-                            echo 'Español';
-                        } else {
-                            echo 'P\'urhépecha';
-                        } ?>
-                    </span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/spanish';">Español</a>
-                        </li>
-                        <li>
-                            <a href="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/purhepecha';">P'urhépecha</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+        <?php include 'partials/header.php'; ?>
 
         <div class="header-img"></div>
         <br />
@@ -183,9 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </section>
             <?php } ?>
         </nav>
-        <footer class="bg-green">
-
-        </footer>
+        <?php include 'partials/footer.php'; ?>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>assets/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
